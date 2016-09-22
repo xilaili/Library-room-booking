@@ -7,4 +7,8 @@
   <%= render @rooms %>
 </ul>
 
+<% if isadmin? %>
+    <%= link_to "Create A Room", new_room_path, class: "btn btn-lg btn-primary" %>
+<% end %>
+
 <%= will_paginate %>
