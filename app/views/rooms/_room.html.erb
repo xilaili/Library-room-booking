@@ -1,0 +1,7 @@
+<li>
+  <%= link_to room.room_id, room %>
+  <% if current_user.admin? %>
+    | <%= link_to "delete", room, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  <% end %>
+</li>

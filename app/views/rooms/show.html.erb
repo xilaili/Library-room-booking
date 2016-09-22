@@ -1,0 +1,12 @@
+<% provide(:title, @room.room_id) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= @room.room_id %>
+      </h1>
+      <h2><%= @room.size %></h2>
+      <h2><%= @room.status %></h2>
+    </section>
+  </aside>
+</div>
