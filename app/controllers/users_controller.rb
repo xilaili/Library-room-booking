@@ -1,17 +1,30 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:edit, :update, :index, :destroy, :show]
-  before_action :correct_user,   only: [:edit, :update, :show]
-  before_action :admin_user,     only: :destroy
+  before_action :correct_user,   only: [:edit, :update]
+  before_action :admin_user,     only: [:destroy, :upgrade, :downgrade]
   def new
     @user = User.new
   end
   
   def index
-    @users = User.paginate(page: params[:page])
+    if current_user.admin?
+      @users = User.paginate(page: params[:page])
+    else
+      flash[:fail] = "Permission denied"
+      redirect_to current_user
+    end
   end
   
   def show
     @user = User.find(params[:id])
+    
+    if current_user?(@user) or current_user.admin?
+      @user
+    else
+      flash[:fail] = "Permission denied"
+      redirect_to current_user
+    end
+    
   end
   
   def create
@@ -41,8 +54,28 @@ class UsersController < ApplicationController
   end
   
   def destroy
-    User.find(params[:id]).destroy
-    flash[:success] = "User deleted"
+      User.find(params[:id]).destroy
+      flash[:success] = "User deleted"
+      redirect_to users_url
+  end
+  
+  def downgrade
+    @user = User.find(params[:id])
+    @user.admin = false
+    @user.save
+    if !@user.admin?
+      flash[:success] = "#{@user.name}"+" "+"removed from admin"
+    end
+    redirect_to users_url
+  end
+  
+  def upgrade
+    @user = User.find(params[:id])
+    @user.admin = true
+    @user.save
+    if @user.admin?
+      flash[:success] = "#{@user.name}"+" "+"added to admin"
+    end
     redirect_to users_url
   end
   
@@ -52,9 +85,13 @@ class UsersController < ApplicationController
                                    :password_confirmation)
     end
     
+    def admin_params
+      params.require(:user).permit(:admin)
+    end
+    
     def logged_in_user
       unless logged_in?
-        store_location
+        #store_location
         flash[:danger] = "Please log in."
         redirect_to login_url
       end

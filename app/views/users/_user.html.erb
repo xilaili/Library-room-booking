@@ -1,7 +1,12 @@
 <li>
   <%= link_to user.name, user %>
-  <% if current_user.admin? && !current_user?(user) %>
+  <% if current_user.admin? && !current_user?(user) && !user.pre_admin? %>
     | <%= link_to "delete", user, method: :delete,
                                   data: { confirm: "You sure?" } %>
+    <% if user.admin? %>
+      | <%= link_to "remove from admin", controller: "users", action: "downgrade", :id => user.id %>
+    <% else %>
+      | <%= link_to "add to admin", controller: "users", action: "upgrade", :id => user.id %>
+    <% end %>
   <% end %>
 </li>
