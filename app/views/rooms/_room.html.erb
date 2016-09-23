@@ -1,0 +1,21 @@
+<li>
+  <%= link_to room.room_id, room %>
+    |<%= room.size %> seats
+    |
+    <% if !room.status %>
+          Available
+    <% else %>
+          Not available
+    <% end %>
+    |
+    <% if !room.status?%>
+        <%= link_to "Book", room %>
+    <% end %>
+    
+
+    <% if current_user.admin? %>
+    | <%= link_to "delete", room, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+    <% end %>
+
+</li>

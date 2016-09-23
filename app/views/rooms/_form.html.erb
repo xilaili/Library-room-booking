@@ -1,0 +1,10 @@
+<%= form_for(@room) do |f| %>
+
+  <%= f.label :room_id %>
+  <%= f.text_field :room_id, class: 'form-control' %>
+
+  <%= f.label :size %>
+  <%= f.text_field :size, class: 'form-control' %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

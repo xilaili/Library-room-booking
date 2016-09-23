@@ -1,0 +1,16 @@
+<% provide(:title, "Book room") %>
+<h1>Book room</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@room) do |f| %>
+    <%= f.radio_button :status, "false" , checked: true %>
+    <%= f.label :status, "THINK AGAIN", :value => "false" %></p>
+    <%= f.radio_button :status ,"true" %>
+    <%= f.label :status, "I WANT TO BOOK", :value => "true"  %></p>
+
+      <%= f.submit "Save changes", class: "btn btn-primary" %>
+    <% end %>
+  
+  </div>
+</div>
