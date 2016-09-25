@@ -1,0 +1,14 @@
+<% provide(:title, 'All histories') %>
+<h1>All histories</h1>
+
+<%= will_paginate %>
+
+<ul class="histories">
+  <%= render @histories %>
+</ul>
+
+<% if isadmin? %>
+    <%= link_to "Create A History", new_history_path, class: "btn btn-lg btn-primary" %>
+<% end %>
+
+<%= will_paginate %>

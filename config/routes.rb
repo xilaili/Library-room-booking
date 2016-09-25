@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   get  '/users/:id(.:format)/downgrade' => 'users#downgrade'
 
   resources :rooms
+  get   'update'  => 'rooms#update'
+  resources :histories
+  
 end

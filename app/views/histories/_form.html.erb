@@ -1,0 +1,15 @@
+<%= form_for(@history) do |f| %>
+
+  <%= f.label :room_id %>
+  <%= f.text_field :room_id, class: 'form-control' %>
+  
+  <%= f.label :user_email %>
+  <%= f.text_field :user_email, class: 'form-control' %>
+  
+  <%= f.label "Start from" %>
+  <%= f.datetime_local_field :startTime, class: 'form-control' %>
+  <p>The room will be booked for 2 hours from the starting time you choose. Please enter a time to check availability. </p>
+  <br>
+  
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

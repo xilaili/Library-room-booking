@@ -1,0 +1,14 @@
+<li>
+  <%= link_to history.id, history %>
+    |<%= history.room_id %>
+    |<%= history.user_email %>
+    |<%= history.startTime %>
+    |<%= history.endTime %>
+    
+    
+    <% if current_user.pre_admin? %>
+    | <%= link_to "delete", history, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+    <% end %>
+
+</li>

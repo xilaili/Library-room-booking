@@ -6,16 +6,16 @@
         <%= @room.room_id %>
       </h1>
       <h2>Size: <%= @room.size %></h2>
-      <h2>Status: 
-        <% if !@room.status %>
-          Available
-        <% else %>
-          Not available
-        <% end %>
-      </h2>
-      <% if !@room.status?%>
-        <%= link_to "Book", edit_room_path, class: "btn btn-lg btn-primary" %>
+      <p>Available time:</p><br>
+      <p>Book this room within 7 days from now, enter the start time you want to book this room. </p>
+      
+      <%= form_tag(update_path, :method => "get", id: "update-form") do %>
+            <%= datetime_local_field :start_time, params[:start_time], placeholder: "Start Time",  class: 'form-control' %>
+            <%= hidden_field_tag "rid", @room.room_id%>
+            <%= submit_tag "Check availability and Book" , class: "btn btn-primary"%>
       <% end %>
+      
+      <p>Room may not be available if it has been book within the time you select. </p>
     </section>
   </aside>
 </div>

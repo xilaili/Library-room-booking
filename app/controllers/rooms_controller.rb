@@ -34,6 +34,38 @@ class RoomsController < ApplicationController
   end
 
   def update
+    @room = Room.find_by(room_id: params[:rid])
+    @history = History.new
+    @history.user_email = current_user.email
+    @history.room_id = params[:rid]
+    @history.startTime = params[:start_time][0].to_time
+    @history.endTime = params[:start_time][0].to_time + 2.hours
+    if @history.startTime > Time.now+7.days
+      flash[:danger] = "booking up to 7 days ahead"
+      redirect_to @room and return
+    end
+    
+    @hists = History.where(room_id: @history.room_id)
+    @hists.each do |h|
+        if h.startTime<@history.startTime and h.endTime>@history.startTime
+          flash[:danger] = "Conflict"
+          redirect_to @room and return
+        end
+        if h.startTime>@history.startTime and h.startTime<@history.endTime
+          flash[:danger] = "Conflict"
+          redirect_to @room and return
+        end
+    end
+    
+    if @history.save
+      flash[:success] = "The room has been booked"
+      redirect_to @room
+    else
+      flash[:danger] = "Something wrong: the room not booked successfully"
+      redirect_to @room
+    end
+
+=begin
     @room = Room.find_by_id(params[:id])
     if @room.update_attributes(room_params)
       if @room.status==true
@@ -46,6 +78,7 @@ class RoomsController < ApplicationController
     else
       render 'edit'
     end
+=end
   end
   
   private
