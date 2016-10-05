@@ -28,15 +28,16 @@ class HistoriesController < ApplicationController
     
     #check availability
     @hists = History.where(room_id: @history.room_id)
+
     @hists.each do |h|
-        if h.startTime<@history.startTime and h.endTime>@history.startTime
-          flash[:danger] = "Conflict"
-          render 'new' and return
-        end
-        if h.startTime>@history.startTime and h.startTime<@history.endTime
-          flash[:danger] = "Conflict"
-          render 'new' and return 
-        end
+      if h.startTime<=@history.startTime and h.endTime>@history.startTime
+        flash[:danger] = "Conflict"
+        render 'new' and return
+      end
+      if h.startTime<@history.endTime and h.endTime>=@history.endTime
+        flash[:danger] = "Conflict"
+        render 'new' and return 
+      end
     end
     
     if @history.save
@@ -56,6 +57,28 @@ class HistoriesController < ApplicationController
     History.find(params[:id]).destroy
     flash[:success] = "History deleted"
     redirect_to histories_url
+  end
+  
+  def search
+    @rooms = []
+    if params.has_key?(:start_time)
+      @size = params[:size]
+      @building = params[:building]
+      @search_start_time = DateTime.new(params[:start_time]['year'].to_i ,params[:start_time]['month'].to_i ,params[:start_time]['day'].to_i ,params[:start_time]['hour'].to_i ,00,00)
+      @search_end_time = @search_start_time + 2.hours
+      subquery = Room.joins("LEFT OUTER JOIN histories on rooms.room_id = histories.room_id").where("((? >= histories.startTime AND ? < histories.endTime ) OR ( ? > histories.startTime AND ? <= histories.endTime ))", @search_start_time, @search_start_time, @search_end_time, @search_end_time).distinct.select('rooms.room_id')
+      if @size != 'Any' and @building != 'Any'
+        @rooms = Room.where(" room_id not in (?)", subquery).where(" size = ?", @size).where(" building = ?", @building)
+      elsif @size != 'Any'
+        @rooms = Room.where(" room_id not in (?)", subquery).where(" size = ?", @size)
+      elsif @building != 'Any'
+        @rooms = Room.where(" room_id not in (?)", subquery).where(" building = ?", @building)
+      else
+        @rooms = Room.where(" room_id not in (?)", subquery)
+      end
+      #@rooms = Room.where("room_id in (?)", subquery)
+      #@rooms = Room.all
+    end
   end
   
   private

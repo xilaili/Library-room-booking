@@ -1,0 +1,58 @@
+<h1> Search for available rooms</h1>
+
+<%= form_tag(search_path, :method => "get", id: "search-form") do %>
+  <div class="field">
+      <%= label_tag :"start time" %>
+      <%= select_datetime(Time.now - 3.hours, :discard_minute => true, :prefix => :start_time) %>
+  </div>
+  
+  <div>
+      <%= label_tag :"Size" %><br>
+      Small (4 seats)
+      <%= radio_button_tag :size, 'Small' %> Medium (6 seats)
+      <%= radio_button_tag :size, 'Medium' %> Large (12 seats)
+      <%= radio_button_tag :size, 'Large' %> Any
+      <%= radio_button_tag :size, 'Any', true %>
+  </div>
+  
+  <div>
+    <%= label_tag :"Building" %><br>
+    D.H.Hill
+    <%= radio_button_tag :building, 'D.H.Hill' %> James.B.Hunt
+    <%= radio_button_tag :building, 'James.B.Hunt' %> Any
+    <%= radio_button_tag :building, 'Any', true %>
+  </div>
+
+  <%= submit_tag "Check availability and Book" , class: "btn btn-primary"%>
+<% end %>
+
+
+<p id="notice"><%= notice %></p>
+<%if not defined?(@rooms) or @rooms.empty? %>
+    <p>There are no rooms.</p>
+<%else%>
+<h1>Rooms</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Room number</th>
+    <th>Size</th>
+    <th>Building</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @rooms.each do |room| %>
+      <tr>
+        <td><%= room.room_id %></td>
+        <td><%= room.size %></td>
+        <td><%= room.building %></td>
+        <td><%= link_to 'Book',new_history_path(:room => room, :start_time => @search_start_time, :end_time => @search_end_time) %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<% end %>
+<br>

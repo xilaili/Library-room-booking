@@ -4,7 +4,10 @@
   <%= f.text_field :room_id, class: 'form-control' %>
 
   <%= f.label :size %>
-  <%= f.text_field :size, class: 'form-control' %>
+  <%= f.select :size, [['Small - 4 chairs','Small'],['Medium - 6 chairs','Medium'],['Large - 12 chairs','Large']], class: 'form-control' %>
+  
+  <%= f.label :building %>
+  <%= f.select :building, [['D.H.Hill','D.H.hill'],['James.B.Hunt','James.B.Hunt']], class: 'form-control' %>
 
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>

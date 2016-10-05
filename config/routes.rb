@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   resources :rooms
   get   'update'  => 'rooms#update'
+ 
   resources :histories
+  get   'search'  => 'histories#search'
   
 end

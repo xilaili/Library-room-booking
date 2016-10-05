@@ -81,9 +81,11 @@ class RoomsController < ApplicationController
 =end
   end
   
+
+  
   private
     def room_params
-      params.require(:room).permit(:room_id, :size, :status)
+      params.require(:room).permit(:room_id, :size, :building)
     end
     
     def logged_in_user
