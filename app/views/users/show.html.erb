@@ -2,9 +2,41 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-      <h1>
-        <%= @user.name %>
-      </h1>
+      <h1><%= @user.name+" ("+@user.email+")" %></h1>
+      <% if @user.admin? %>
+        <h2>admin user</h2>
+      <% else %>
+        <h2>library member</h2>
+      <% end %>
+      
+      <%= link_to "New Booking", search_path, class: "btn btn-lg btn-primary" %>
+      <br><br><br>
+      
+      <h1>My booking histories:</h1>
+      <% current, past = [], [] %>
+      <% for h in History.where(user_email: @user.email) %>
+        <% if h.endTime<Time.now-3.hours %>
+          <% past.push(h) %>
+        <% else %>
+          <% current.push(h) %>
+        <% end %>
+      <% end %>
+      <br><h>Current booking</h><br><br>
+      <% for h in current %>
+      <li>
+        <%= h.room_id %> | <%= h.startTime %> | <%= h.endTime %> | <%= link_to "Cancel Booking", h, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+      </li>
+      <% end %>
+      <br><h>Past booking</h><br><br>
+      <% for h in past %>
+      <li>
+        <%= h.room_id %> | <%= h.startTime %> | <%= h.endTime %> 
+      </li>
+      <% end %>
+      
+
+      
     </section>
   </aside>
 </div>

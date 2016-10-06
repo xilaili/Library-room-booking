@@ -1,15 +1,45 @@
 <%= form_for(@history) do |f| %>
 
-  <%= f.label :room_id %>
-  <%= f.text_field :room_id, class: 'form-control' %>
-  
-  <%= f.label :user_email %>
-  <%= f.text_field :user_email, class: 'form-control' %>
-  
-  <%= f.label "Start from" %>
-  <%= f.datetime_local_field :startTime, class: 'form-control' %>
-  <p>The room will be booked for 2 hours from the starting time you choose. Please enter a time to check availability. </p>
-  <br>
+<% if params and params.key?('start_time') %>
+  <div class="field">
+    <%= f.label :startTime %>
+    <%= f.hidden_field :startTime, :value => DateTime.parse(params['start_time']) %>
+    <%= DateTime.parse(params['start_time']).strftime("%Y-%b-%d %I%p") %>
+  </div>
+<% end %>
+<% if params and params.key?('end_time') %>
+  <div class="field">
+    <%= f.label :endTime %>
+    <%= f.hidden_field :endTime, :value => DateTime.parse(params['end_time']) %>
+    <%= DateTime.parse(params['end_time']).strftime("%Y-%b-%d %I%p") %>
+  </div>
+<% end %>
+  <div class="field">
+    <%= f.label :room_id %>
+    <%= f.hidden_field :room_id, :value => params['room'] %>
+    <%= params['room'] %>
+  </div>
+    <div class="field">
+    <%= f.label :size %>
+    <%= f.hidden_field :size, :value => params['size'] %>
+    <%= params['size'] %>
+  </div>
+    <div class="field">
+    <%= f.label :building %>
+    <%= f.hidden_field :building, :value => params['building'] %>
+    <%= params['building'] %>
+  </div>
+  <div class="field">
+  <% if current_user.admin? %>
+    <%= f.label :user_email %>
+    <%= f.text_field :user_email, class: 'form_control' %> 
+  <% else %>
+    <%= f.label :user_email %>
+    <%= f.hidden_field :user_email, :value => current_user.email %>
+    <%= current_user.email %>
+  <% end %>
+  </div>
+
   
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>

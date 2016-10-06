@@ -1,6 +1,5 @@
 class HistoriesController < ApplicationController
-  before_action :admin_user, only: [:new, :create, :index, :show]
-  before_action :pre_admin_user,     only: [:destroy]
+  before_action :admin_user, only: [:index, :show]
   def index
     @histories = History.paginate(page: params[:page])
   end
@@ -11,6 +10,10 @@ class HistoriesController < ApplicationController
 
   def create
     @history = History.new(history_params)    # not finised
+    @history.startTime = @history.startTime.to_time + 0.minutes
+    @history.endTime = @history.endTime.to_time + 0.minutes
+    # need some constraints here. only one booking per day.... , if xbm@qq.com is in user list
+=begin
     if !Room.exists?(room_id: @history.room_id)
       flash[:danger] = "Room not exists"
       render 'new' and return
@@ -39,6 +42,7 @@ class HistoriesController < ApplicationController
         render 'new' and return 
       end
     end
+=end
     
     if @history.save
       flash[:success] = "The history has been created"
@@ -56,7 +60,7 @@ class HistoriesController < ApplicationController
   def destroy
     History.find(params[:id]).destroy
     flash[:success] = "History deleted"
-    redirect_to histories_url
+    redirect_to current_user
   end
   
   def search
