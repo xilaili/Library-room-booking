@@ -39972,3 +39972,297 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 305ms (Views: 298.1ms | ActiveRecord: 2.4ms)
 
 
+Started GET "/users" for 71.69.164.3 at 2016-10-07 20:34:42 +0000
+Cannot render console from 71.69.164.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."admin" = ?[0m  [["admin", false]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."admin" = ? LIMIT ? OFFSET ?[0m  [["admin", false], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered users/_user.html.erb (2.5ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.4ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.8ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.7ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.7ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.7ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (2.2ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.7ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/index.html.erb within layouts/application (89.7ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 219ms (Views: 191.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 71.69.164.3 at 2016-10-07 20:34:44 +0000
+Cannot render console from 71.69.164.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 184ms (Views: 179.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 71.69.164.3 at 2016-10-07 20:34:45 +0000
+Cannot render console from 71.69.164.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."admin" = ?[0m  [["admin", false]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."admin" = ? LIMIT ? OFFSET ?[0m  [["admin", false], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered users/_user.html.erb (2.9ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.8ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (2.7ms)
+  Rendered users/_user.html.erb (0.8ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.9ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (1.0ms)
+  Rendered users/_user.html.erb (0.8ms)
+  Rendered users/_user.html.erb (0.7ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (1.1ms)
+  Rendered users/_user.html.erb (2.8ms)
+  Rendered users/_user.html.erb (0.7ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.7ms)
+  Rendered users/_user.html.erb (2.2ms)
+  Rendered users/_user.html.erb (0.7ms)
+  Rendered users/_user.html.erb (0.7ms)
+  Rendered users/_user.html.erb (0.7ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/_user.html.erb (0.5ms)
+  Rendered users/index.html.erb within layouts/application (112.5ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 234ms (Views: 227.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admins" for 71.69.164.3 at 2016-10-07 20:34:45 +0000
+Cannot render console from 71.69.164.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#adminlist as HTML
+  Rendering users/adminlist.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."admin" = ? LIMIT ? OFFSET ?[0m  [["admin", true], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of users/_user.html.erb [10 times] (11.8ms)
+  Rendered users/adminlist.html.erb within layouts/application (18.3ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 141ms (Views: 135.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/createuseradmin" for 71.69.164.3 at 2016-10-07 20:34:46 +0000
+Cannot render console from 71.69.164.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_form.html.erb (11.2ms)
+  Rendered users/new.html.erb within layouts/application (13.6ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 122ms (Views: 118.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/histories" for 71.69.164.3 at 2016-10-07 20:34:48 +0000
+Cannot render console from 71.69.164.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering histories/index.html.erb within layouts/application
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "histories"[0m
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT  "histories".* FROM "histories" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of histories/_history.html.erb [12 times] (5.6ms)
+  Rendered histories/index.html.erb within layouts/application (35.1ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 182ms (Views: 164.4ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/rooms" for 71.69.164.3 at 2016-10-07 20:34:49 +0000
+Cannot render console from 71.69.164.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms"[0m
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of rooms/_room.html.erb [4 times] (6.0ms)
+  Rendered rooms/index.html.erb within layouts/application (29.1ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 152ms (Views: 142.0ms | ActiveRecord: 2.5ms)
+
+
+Started DELETE "/logout" for 71.69.164.3 at 2016-10-07 20:34:53 +0000
+Cannot render console from 71.69.164.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qoU67oZjwG47J5S2FMuX3jeCBLPF1mwGwTFjlAdkoht9m75mfyZzlXhzlPCbQkofQH7DbsWVtVSzRt0OWY6BDA=="}
+Redirected to https://test-kibalu.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 71.69.164.3 at 2016-10-07 20:34:53 +0000
+Cannot render console from 71.69.164.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (3.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 123ms (Views: 118.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for 71.69.164.3 at 2016-10-07 20:34:54 +0000
+Cannot render console from 71.69.164.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.9ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 149ms (Views: 144.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/login" for 71.69.164.3 at 2016-10-07 20:35:11 +0000
+Cannot render console from 71.69.164.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qws437UxY95G1ODU2GjUww3jK1pe+zDq9NjVxWR5M8W/54n8o/5ZjCTWqpZ5iPEPf64OhQh1LNG+HTE9Ptcznw==", "session"=>{"email"=>"xli47@ncsu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "xli47@ncsu.edu"], ["LIMIT", 1]]
+Redirected to https://test-kibalu.c9users.io/users/1
+Completed 302 Found in 85ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 71.69.164.3 at 2016-10-07 20:35:11 +0000
+Cannot render console from 71.69.164.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."user_email" = ?[0m  [["user_email", "xli47@ncsu.edu"]]
+  Rendered users/show.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 130ms (Views: 123.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 71.69.164.3 at 2016-10-07 20:43:47 +0000
+Cannot render console from 71.69.164.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."user_email" = ?[0m  [["user_email", "xli47@ncsu.edu"]]
+  Rendered users/show.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 155ms (Views: 149.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1/edit" for 71.69.164.3 at 2016-10-07 20:43:49 +0000
+Cannot render console from 71.69.164.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.5ms)
+  Rendered users/_form.html.erb (14.8ms)
+  Rendered users/edit.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (5.5ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 351ms (Views: 338.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1/edit" for 71.69.164.3 at 2016-10-07 20:53:30 +0000
+Cannot render console from 71.69.164.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.7ms)
+  Rendered users/edit.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 149ms (Views: 144.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for 71.69.164.3 at 2016-10-07 20:53:34 +0000
+Cannot render console from 71.69.164.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.6ms)
+  Rendered users/edit.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 109ms (Views: 104.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/createuseradmin" for 71.69.164.3 at 2016-10-07 20:53:45 +0000
+Cannot render console from 71.69.164.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/_form.html.erb (10.5ms)
+  Rendered users/new.html.erb within layouts/application (19.3ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 122ms (Views: 118.9ms | ActiveRecord: 0.4ms)
+
+
