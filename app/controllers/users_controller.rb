@@ -6,9 +6,15 @@ class UsersController < ApplicationController
     @user = User.new
   end
   
+  def adminlist
+    list=User.where(:admin => true)
+    @users=list.paginate(page: params[:page])
+  end
+  
   def index
     if current_user.admin?
-      @users = User.paginate(page: params[:page])
+       list=User.where(:admin => false)
+       @users=list.paginate(page: params[:page])
     else
       flash[:fail] = "Permission denied"
       redirect_to current_user
@@ -30,9 +36,14 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)    # Not the final implementation!
     if @user.save
-      log_in @user
-      redirect_to @user
-      flash[:success] = "Welcome to the Sample App!"
+      if current_user.nil?
+         log_in @user
+         redirect_to @user
+         flash[:success] = "Welcome to the Sample App!"
+      else
+        redirect_to @user
+         flash[:success] = "create the user"
+      end
     else
       render 'new'
     end
@@ -95,7 +106,7 @@ class UsersController < ApplicationController
   private
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
+                                   :password_confirmation, :admin)
     end
     
     def admin_params

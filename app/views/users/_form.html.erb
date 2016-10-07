@@ -12,6 +12,13 @@
 
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation, class: 'form-control' %>
+  
+  <% if logged_in? and current_user.admin? %>
+      <%= f.radio_button :admin ,false , checked: true %>
+      <%= f.label :admin, "USER", :value => false  %>
+      <%= f.radio_button :admin ,true %>
+      <%= f.label :admin, "ADMIN", :value => true  %>
+  <% end %>
 
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>
