@@ -73,6 +73,16 @@ class HistoriesController < ApplicationController
       @search_end_time = @search_start_time + 2.hours
 =begin
       subquery = Room.joins("LEFT OUTER JOIN histories on rooms.room_id = histories.room_id").where("((? >= histories.startTime AND ? < histories.endTime ) OR ( ? > histories.startTime AND ? <= histories.endTime ))", @search_start_time, @search_start_time, @search_end_time, @search_end_time).distinct.select('rooms.room_id')
+=end
+      subquery = []
+      History.all.each do |h|
+        if h.startTime<=@search_start_time and h.endTime>@search_start_time
+          subquery.push(h.room_id)
+        end
+        if h.startTime<@search_end_time and h.endTime>=@search_end_time
+          subquery.push(h.room_id)
+        end
+      end
       if @size != 'Any' and @building != 'Any'
         @rooms = Room.where(" room_id not in (?)", subquery).where(" size = ?", @size).where(" building = ?", @building)
       elsif @size != 'Any'
@@ -83,8 +93,8 @@ class HistoriesController < ApplicationController
         @rooms = Room.where(" room_id not in (?)", subquery)
       end
       #@rooms = Room.where("room_id in (?)", subquery)
-=end
-      @rooms = Room.all
+      #@rooms = Room.all
+      #@rooms = subquery
     end
   end
   
