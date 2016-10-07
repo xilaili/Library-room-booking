@@ -71,6 +71,7 @@ class HistoriesController < ApplicationController
       @building = params[:building]
       @search_start_time = DateTime.new(params[:start_time]['year'].to_i ,params[:start_time]['month'].to_i ,params[:start_time]['day'].to_i ,params[:start_time]['hour'].to_i ,00,00)
       @search_end_time = @search_start_time + 2.hours
+=begin
       subquery = Room.joins("LEFT OUTER JOIN histories on rooms.room_id = histories.room_id").where("((? >= histories.startTime AND ? < histories.endTime ) OR ( ? > histories.startTime AND ? <= histories.endTime ))", @search_start_time, @search_start_time, @search_end_time, @search_end_time).distinct.select('rooms.room_id')
       if @size != 'Any' and @building != 'Any'
         @rooms = Room.where(" room_id not in (?)", subquery).where(" size = ?", @size).where(" building = ?", @building)
@@ -82,7 +83,8 @@ class HistoriesController < ApplicationController
         @rooms = Room.where(" room_id not in (?)", subquery)
       end
       #@rooms = Room.where("room_id in (?)", subquery)
-      #@rooms = Room.all
+=end
+      @rooms = Room.all
     end
   end
   
