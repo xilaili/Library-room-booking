@@ -44,8 +44,6 @@ class UsersController < ApplicationController
   
   def update
     @user = User.find(params[:id])
-    @user.admin = true
-    @user.pre_admin = true
     if @user.update_attributes(user_params)
       # Handle a successful update.
       flash[:success] = "Profile updated"
