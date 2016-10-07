@@ -24,7 +24,20 @@ class RoomsController < ApplicationController
   end
 
   def destroy
-    Room.find(params[:id]).destroy
+    @room = Room.find(params[:id])
+    his = History.where(room_id: @room.room_id)
+      flag = false
+      for i in his
+        if i.endTime>=Time.now-3.hours
+          flag = true
+          break
+        end
+      end
+      if flag
+        flash[:danger] = "This room has pending reservations, please cancel the booking before delete the room"
+        redirect_to rooms_url and return 
+      end
+    @room.destroy
     flash[:success] = "Room deleted"
     redirect_to rooms_url
   end

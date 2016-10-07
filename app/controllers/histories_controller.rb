@@ -13,7 +13,7 @@ class HistoriesController < ApplicationController
     @history.startTime = @history.startTime.to_time + 0.minutes
     @history.endTime = @history.endTime.to_time + 0.minutes
     # need some constraints here. only one booking per day.... , if xbm@qq.com is in user list
-=begin
+
     if !Room.exists?(room_id: @history.room_id)
       flash[:danger] = "Room not exists"
       render 'new' and return
@@ -26,8 +26,6 @@ class HistoriesController < ApplicationController
       flash[:danger] = "booking up to 7 days ahead"
       render 'new' and return 
     end
-    @history.startTime = @history.startTime.to_time + 0.minutes
-    @history.endTime = @history.startTime.to_time + 2.hours
     
     #check availability
     @hists = History.where(room_id: @history.room_id)
@@ -42,11 +40,14 @@ class HistoriesController < ApplicationController
         render 'new' and return 
       end
     end
-=end
     
     if @history.save
       flash[:success] = "The history has been created"
-      redirect_to @history
+      if current_user.admin? 
+        redirect_to histories_url
+      else 
+        redirect_to current_user
+      end
     else
       flash[:danger] = "not created"
       render 'new'

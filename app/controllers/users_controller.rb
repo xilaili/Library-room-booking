@@ -54,7 +54,20 @@ class UsersController < ApplicationController
   end
   
   def destroy
-      User.find(params[:id]).destroy
+      @user = User.find(params[:id])
+      his = History.where(user_email: @user.email)
+      flag = false
+      for i in his
+        if i.endTime>=Time.now-3.hours
+          flag = true
+          break
+        end
+      end
+      if flag
+        flash[:danger] = "This user has pending reservations, please cancel the booking before delete the user"
+        redirect_to users_url and return 
+      end
+      @user.destroy
       flash[:success] = "User deleted"
       redirect_to users_url
   end
