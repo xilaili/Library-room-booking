@@ -83,7 +83,9 @@ class HistoriesController < ApplicationController
           subquery.push(h.room_id)
         end
       end
-      if @size != 'Any' and @building != 'Any'
+      if subquery==[]
+        @rooms = Room.all
+      elsif @size != 'Any' and @building != 'Any'
         @rooms = Room.where(" room_id not in (?)", subquery).where(" size = ?", @size).where(" building = ?", @building)
       elsif @size != 'Any'
         @rooms = Room.where(" room_id not in (?)", subquery).where(" size = ?", @size)

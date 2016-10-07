@@ -37965,3 +37965,509 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 177ms (Views: 163.6ms | ActiveRecord: 2.8ms)
 
 
+Started GET "/rooms" for 10.240.0.241 at 2016-10-07 17:07:32 +0000
+Cannot render console from 10.240.0.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms"[0m
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of rooms/_room.html.erb [4 times] (7.5ms)
+  Rendered rooms/index.html.erb within layouts/application (41.4ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 170ms (Views: 154.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/search" for 10.240.0.187 at 2016-10-07 17:07:34 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#search as HTML
+  Rendering histories/search.html.erb within layouts/application
+  Rendered histories/search.html.erb within layouts/application (913.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (6.6ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 1177ms (Views: 1167.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&start_time%5Byear%5D=2016&start_time%5Bmonth%5D=10&start_time%5Bday%5D=7&start_time%5Bhour%5D=14&start_time%5Bminute%5D=7&size=Any&building=Any&commit=Check+availability+and+Book" for 10.240.1.19 at 2016-10-07 17:07:37 +0000
+Cannot render console from 10.240.1.19! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "start_time"=>{"year"=>"2016", "month"=>"10", "day"=>"7", "hour"=>"14", "minute"=>"7"}, "size"=>"Any", "building"=>"Any", "commit"=>"Check availability and Book"}
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendering histories/search.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms" WHERE ( room_id not in (NULL))[0m
+  Rendered histories/search.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_shim.html.erb (1.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.3ms)
+  Rendered layouts/_footer.html.erb (2.2ms)
+Completed 200 OK in 270ms (Views: 256.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&start_time%5Byear%5D=2016&start_time%5Bmonth%5D=10&start_time%5Bday%5D=7&start_time%5Bhour%5D=14&start_time%5Bminute%5D=7&size=Any&building=Any&commit=Check+availability+and+Book" for 10.240.1.20 at 2016-10-07 17:07:40 +0000
+Cannot render console from 10.240.1.20! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "start_time"=>{"year"=>"2016", "month"=>"10", "day"=>"7", "hour"=>"14", "minute"=>"7"}, "size"=>"Any", "building"=>"Any", "commit"=>"Check availability and Book"}
+  [1m[36mHistory Load (1.3ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendering histories/search.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms" WHERE ( room_id not in (NULL))[0m
+  Rendered histories/search.html.erb within layouts/application (17.3ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (7.3ms)
+  Rendered layouts/_footer.html.erb (1.9ms)
+Completed 200 OK in 299ms (Views: 242.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/rooms" for 10.240.0.208 at 2016-10-07 17:08:00 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms"[0m
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of rooms/_room.html.erb [4 times] (84.6ms)
+  Rendered rooms/index.html.erb within layouts/application (106.4ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (2.1ms)
+Completed 200 OK in 284ms (Views: 277.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/rooms" for 10.240.1.15 at 2016-10-07 17:08:17 +0000
+Cannot render console from 10.240.1.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms"[0m
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of rooms/_room.html.erb [4 times] (11.6ms)
+  Rendered rooms/index.html.erb within layouts/application (28.2ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 215ms (Views: 209.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/search" for 10.240.0.207 at 2016-10-07 17:11:07 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#search as HTML
+  Rendering histories/search.html.erb within layouts/application
+  Rendered histories/search.html.erb within layouts/application (32.5ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (24.1ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 176ms (Views: 170.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&start_time%5Byear%5D=2016&start_time%5Bmonth%5D=10&start_time%5Bday%5D=7&start_time%5Bhour%5D=14&start_time%5Bminute%5D=11&size=Any&building=Any&commit=Check+availability+and+Book" for 10.240.1.19 at 2016-10-07 17:11:13 +0000
+Cannot render console from 10.240.1.19! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "start_time"=>{"year"=>"2016", "month"=>"10", "day"=>"7", "hour"=>"14", "minute"=>"11"}, "size"=>"Any", "building"=>"Any", "commit"=>"Check availability and Book"}
+  [1m[36mHistory Load (0.7ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendering histories/search.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms" WHERE ( room_id not in (NULL))[0m
+  Rendered histories/search.html.erb within layouts/application (141.3ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (1.5ms)
+Completed 200 OK in 298ms (Views: 254.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&start_time%5Byear%5D=2016&start_time%5Bmonth%5D=10&start_time%5Bday%5D=7&start_time%5Bhour%5D=14&start_time%5Bminute%5D=11&size=Any&building=Any&commit=Check+availability+and+Book" for 10.240.0.207 at 2016-10-07 17:11:16 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "start_time"=>{"year"=>"2016", "month"=>"10", "day"=>"7", "hour"=>"14", "minute"=>"11"}, "size"=>"Any", "building"=>"Any", "commit"=>"Check availability and Book"}
+  [1m[36mHistory Load (0.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendering histories/search.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms" WHERE ( room_id not in (NULL))[0m
+  Rendered histories/search.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 159ms (Views: 149.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&start_time%5Byear%5D=2016&start_time%5Bmonth%5D=10&start_time%5Bday%5D=7&start_time%5Bhour%5D=14&start_time%5Bminute%5D=11&size=Any&building=Any&commit=Check+availability+and+Book" for 10.240.0.187 at 2016-10-07 17:11:18 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "start_time"=>{"year"=>"2016", "month"=>"10", "day"=>"7", "hour"=>"14", "minute"=>"11"}, "size"=>"Any", "building"=>"Any", "commit"=>"Check availability and Book"}
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendering histories/search.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms" WHERE ( room_id not in (NULL))[0m
+  Rendered histories/search.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 136ms (Views: 125.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&start_time%5Byear%5D=2016&start_time%5Bmonth%5D=10&start_time%5Bday%5D=7&start_time%5Bhour%5D=14&start_time%5Bminute%5D=11&size=Any&building=Any&commit=Check+availability+and+Book" for 10.240.0.207 at 2016-10-07 17:11:21 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "start_time"=>{"year"=>"2016", "month"=>"10", "day"=>"7", "hour"=>"14", "minute"=>"11"}, "size"=>"Any", "building"=>"Any", "commit"=>"Check availability and Book"}
+  [1m[36mHistory Load (0.7ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendering histories/search.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms" WHERE ( room_id not in (NULL))[0m
+  Rendered histories/search.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 129ms (Views: 120.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&start_time%5Byear%5D=2016&start_time%5Bmonth%5D=10&start_time%5Bday%5D=7&start_time%5Bhour%5D=14&start_time%5Bminute%5D=11&size=Any&building=Any&commit=Check+availability+and+Book" for 10.240.0.204 at 2016-10-07 17:11:26 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "start_time"=>{"year"=>"2016", "month"=>"10", "day"=>"7", "hour"=>"14", "minute"=>"11"}, "size"=>"Any", "building"=>"Any", "commit"=>"Check availability and Book"}
+  [1m[36mHistory Load (0.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendering histories/search.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms" WHERE ( room_id not in (NULL))[0m
+  Rendered histories/search.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 172ms (Views: 163.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rooms" for 10.240.1.32 at 2016-10-07 17:11:40 +0000
+Cannot render console from 10.240.1.32! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms"[0m
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of rooms/_room.html.erb [4 times] (4.2ms)
+  Rendered rooms/index.html.erb within layouts/application (21.7ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 206ms (Views: 199.5ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/logout" for 10.240.0.182 at 2016-10-07 17:11:48 +0000
+Cannot render console from 10.240.0.182! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Yqt/ye7QiCjuJIwkwMBxI10wjt4uhVoNbPtCFKejStu95vwgLg5hKaXFtRafoVhi6Dhk4Zag9zi1KRqFYMLcXw=="}
+Redirected to http://library-room-booking-cloned-xilaili626.c9users.io:8080/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.240.1.19 at 2016-10-07 17:11:48 +0000
+Cannot render console from 10.240.1.19! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 151ms (Views: 147.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 10.240.1.15 at 2016-10-07 17:11:54 +0000
+Cannot render console from 10.240.1.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (76.5ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.9ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 191ms (Views: 187.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for 10.240.0.187 at 2016-10-07 17:11:59 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dP3KP4gGKV0F1NerzrkHBaNt5ll5bRtfytqP/K+gykmlDFYSuFBU6/G3RCpbUoNUmCmwNU/dt8O2h9zR5/IVkg==", "session"=>{"email"=>"xli47@ncsu.edu", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "xli47@ncsu.edu"], ["LIMIT", 1]]
+Redirected to http://library-room-booking-cloned-xilaili626.c9users.io:8080/users/1
+Completed 302 Found in 81ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for 10.240.1.17 at 2016-10-07 17:11:59 +0000
+Cannot render console from 10.240.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mHistory Load (0.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."user_email" = ?[0m  [["user_email", "xli47@ncsu.edu"]]
+  Rendered users/show.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 210ms (Views: 204.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/histories" for 10.240.0.187 at 2016-10-07 17:12:03 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering histories/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "histories"[0m
+  [1m[36mHistory Load (0.3ms)[0m  [1m[34mSELECT  "histories".* FROM "histories" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of histories/_history.html.erb [12 times] (5.3ms)
+  Rendered histories/index.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 262ms (Views: 255.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/search" for 10.240.1.17 at 2016-10-07 17:12:14 +0000
+Cannot render console from 10.240.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#search as HTML
+  Rendering histories/search.html.erb within layouts/application
+  Rendered histories/search.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_shim.html.erb (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 112ms (Views: 109.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&start_time%5Byear%5D=2016&start_time%5Bmonth%5D=10&start_time%5Bday%5D=7&start_time%5Bhour%5D=14&start_time%5Bminute%5D=12&size=Any&building=Any&commit=Check+availability+and+Book" for 10.240.0.182 at 2016-10-07 17:12:18 +0000
+Cannot render console from 10.240.0.182! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "start_time"=>{"year"=>"2016", "month"=>"10", "day"=>"7", "hour"=>"14", "minute"=>"12"}, "size"=>"Any", "building"=>"Any", "commit"=>"Check availability and Book"}
+  [1m[36mHistory Load (0.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendering histories/search.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms" WHERE ( room_id not in (NULL))[0m
+  Rendered histories/search.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 186ms (Views: 177.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rooms" for 10.240.0.182 at 2016-10-07 17:12:21 +0000
+Cannot render console from 10.240.0.182! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms"[0m
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of rooms/_room.html.erb [4 times] (4.2ms)
+  Rendered rooms/index.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 166ms (Views: 162.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/rooms/9" for 10.240.0.207 at 2016-10-07 17:12:24 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (18.6ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 134ms (Views: 129.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/update?utf8=%E2%9C%93&start_time%5B%5D=2016-10-07T15%3A00&rid=B102&commit=Check+availability+and+Book" for 10.240.0.206 at 2016-10-07 17:12:37 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RoomsController#update as HTML
+  Parameters: {"utf8"=>"✓", "start_time"=>["2016-10-07T15:00"], "rid"=>"B102", "commit"=>"Check availability and Book"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."room_id" = ? LIMIT ?[0m  [["room_id", "B102"], ["LIMIT", 1]]
+  [1m[36mHistory Load (0.3ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."room_id" = ?[0m  [["room_id", "B102"]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "histories" ("room_id", "created_at", "updated_at", "user_email", "startTime", "endTime") VALUES (?, ?, ?, ?, ?, ?)[0m  [["room_id", "B102"], ["created_at", 2016-10-07 17:12:37 UTC], ["updated_at", 2016-10-07 17:12:37 UTC], ["user_email", "xli47@ncsu.edu"], ["startTime", "2016-10-07 15:00:00 +0000"], ["endTime", "2016-10-07 17:00:00 +0000"]]
+  [1m[35m (73.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://library-room-booking-cloned-xilaili626.c9users.io:8080/rooms/9
+Completed 302 Found in 86ms (ActiveRecord: 75.3ms)
+
+
+Started GET "/rooms/9" for 10.240.0.187 at 2016-10-07 17:12:37 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering rooms/show.html.erb within layouts/application
+  Rendered rooms/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 123ms (Views: 118.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/histories" for 10.240.0.182 at 2016-10-07 17:12:40 +0000
+Cannot render console from 10.240.0.182! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering histories/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "histories"[0m
+  [1m[36mHistory Load (0.3ms)[0m  [1m[34mSELECT  "histories".* FROM "histories" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of histories/_history.html.erb [13 times] (5.6ms)
+  Rendered histories/index.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 209ms (Views: 204.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/search" for 10.240.0.187 at 2016-10-07 17:12:47 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#search as HTML
+  Rendering histories/search.html.erb within layouts/application
+  Rendered histories/search.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 145ms (Views: 142.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&start_time%5Byear%5D=2016&start_time%5Bmonth%5D=10&start_time%5Bday%5D=7&start_time%5Bhour%5D=14&start_time%5Bminute%5D=12&size=Any&building=Any&commit=Check+availability+and+Book" for 10.240.0.182 at 2016-10-07 17:12:49 +0000
+Cannot render console from 10.240.0.182! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "start_time"=>{"year"=>"2016", "month"=>"10", "day"=>"7", "hour"=>"14", "minute"=>"12"}, "size"=>"Any", "building"=>"Any", "commit"=>"Check availability and Book"}
+  [1m[36mHistory Load (0.4ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendering histories/search.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms" WHERE ( room_id not in ('B102'))[0m
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE ( room_id not in ('B102'))[0m
+  Rendered histories/search.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 111ms (Views: 103.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&start_time%5Byear%5D=2016&start_time%5Bmonth%5D=10&start_time%5Bday%5D=7&start_time%5Bhour%5D=14&start_time%5Bminute%5D=12&size=Any&building=Any&commit=Check+availability+and+Book" for 10.240.0.206 at 2016-10-07 17:16:02 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "start_time"=>{"year"=>"2016", "month"=>"10", "day"=>"7", "hour"=>"14", "minute"=>"12"}, "size"=>"Any", "building"=>"Any", "commit"=>"Check availability and Book"}
+  [1m[36mHistory Load (0.8ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendering histories/search.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms" WHERE ( room_id not in ('B102'))[0m
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE ( room_id not in ('B102'))[0m
+  Rendered histories/search.html.erb within layouts/application (23.2ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (21.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 257ms (Views: 157.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/users/1" for 10.240.1.17 at 2016-10-07 17:16:10 +0000
+Cannot render console from 10.240.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."user_email" = ?[0m  [["user_email", "xli47@ncsu.edu"]]
+  Rendered users/show.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 297ms (Views: 159.4ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/histories/50" for 10.240.1.17 at 2016-10-07 17:16:13 +0000
+Cannot render console from 10.240.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fQzvEs4MPZQSO4Qu9LS9idqnRlIW+0jkFm9K5BJ91jyiQWz7DtLUlVnavRyr1ZTIb6+sba7e5dHPvRJ11RxAuA==", "id"=>"50"}
+  [1m[36mHistory Load (0.7ms)[0m  [1m[34mSELECT  "histories".* FROM "histories" WHERE "histories"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "histories" WHERE "histories"."id" = ?[0m  [["id", 50]]
+  [1m[35m (22.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://library-room-booking-cloned-xilaili626.c9users.io:8080/users/1
+Completed 302 Found in 37ms (ActiveRecord: 24.3ms)
+
+
+Started GET "/users/1" for 10.240.0.241 at 2016-10-07 17:16:14 +0000
+Cannot render console from 10.240.0.241! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."user_email" = ?[0m  [["user_email", "xli47@ncsu.edu"]]
+  Rendered users/show.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 135ms (Views: 129.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/histories" for 10.240.0.182 at 2016-10-07 17:16:17 +0000
+Cannot render console from 10.240.0.182! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering histories/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "histories"[0m
+  [1m[36mHistory Load (0.5ms)[0m  [1m[34mSELECT  "histories".* FROM "histories" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of histories/_history.html.erb [12 times] (6.9ms)
+  Rendered histories/index.html.erb within layouts/application (16.3ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 200ms (Views: 194.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/search" for 10.240.0.182 at 2016-10-07 17:16:18 +0000
+Cannot render console from 10.240.0.182! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#search as HTML
+  Rendering histories/search.html.erb within layouts/application
+  Rendered histories/search.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 123ms (Views: 119.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&start_time%5Byear%5D=2016&start_time%5Bmonth%5D=10&start_time%5Bday%5D=7&start_time%5Bhour%5D=14&start_time%5Bminute%5D=16&size=Any&building=Any&commit=Check+availability+and+Book" for 10.240.1.17 at 2016-10-07 17:16:20 +0000
+Cannot render console from 10.240.1.17! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#search as HTML
+  Parameters: {"utf8"=>"✓", "start_time"=>{"year"=>"2016", "month"=>"10", "day"=>"7", "hour"=>"14", "minute"=>"16"}, "size"=>"Any", "building"=>"Any", "commit"=>"Check availability and Book"}
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT "histories".* FROM "histories"[0m
+  Rendering histories/search.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms"[0m
+  [1m[36mRoom Load (1.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  Rendered histories/search.html.erb within layouts/application (66.7ms)
+  Rendered layouts/_shim.html.erb (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (1.2ms)
+Completed 200 OK in 180ms (Views: 170.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/rooms" for 10.240.1.15 at 2016-10-07 17:16:23 +0000
+Cannot render console from 10.240.1.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms"[0m
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of rooms/_room.html.erb [4 times] (8.8ms)
+  Rendered rooms/index.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 266ms (Views: 261.2ms | ActiveRecord: 1.1ms)
+
+
