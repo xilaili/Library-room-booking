@@ -1,6 +1,6 @@
 # Library_sys
-By Xilai Li, Zhiren Lu, Siyu Huang.
 <title>CSC 517 - Project 1</title><br>
+By Xilai Li, Zhiren Lu, Siyu Huang.
 The application is hosted here :https://library-room-booking-lxl.herokuapp.com/  <br>
 Following are the things that are already set up :
 <ul>
