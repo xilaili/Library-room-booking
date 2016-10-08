@@ -1,7 +1,7 @@
 # Library_sys
 <title>CSC 517 - Project 1</title><br>
-By Xilai Li, Zhiren Lu, Siyu Huang.
-The application is hosted here :https://library-room-booking-lxl.herokuapp.com/  <br>
+By Xilai Li, Zhiren Lu, Siyu Huang.<br>
+<b>The application is hosted here :https://library-room-booking-lxl.herokuapp.com/  </b><br>
 Following are the things that are already set up :
 <ul>
 <li>Pre configured admin with email: <b>useremail: xli47@ncsu.edu , password: kevinlee</b></li>
