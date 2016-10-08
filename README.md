@@ -19,7 +19,7 @@ Following are the things that are already set up :
   * <b><u>Manage Rooms</u></b>: 
     * Admin can create a new room, delete the room, see list of the room. 
     * Only admin can see the history of the room
-    * Only admin can cancel the room booked by others: go to the room showpage, if the room is booked by other member,admin also can the cancel button and cancel the room. 
+    * Only admin can cancel the room booked by others: go to the user profile, looking user's history, clicking the cancel button. 
   * <b><u>Manage Members</u></b>: 
     * Displays a list of all library members:click the userslist on the top of the webpage. 
     * See the profile of each member and see the history(only list the latest 10 histories, though history model saved all the history):go to the userslist page and click the user that you want to see.
@@ -36,6 +36,8 @@ Following are the things that are already set up :
     * users_controller_test(path:test/controllers/users_controller_test.rb):test the function of the controller
     * user_test(path:test/models/user_test.rb):test the function of the model
     * integration test(path:test/integration/):test the important part of the users, like:login, signup, edit.
+* <b>other</b>
+  * for some reasons we have changed the github repo. this link: https://github.com/kibalu/library_sys is our previous repo, so the times of commit in this repo will fewer.
 
 
 
