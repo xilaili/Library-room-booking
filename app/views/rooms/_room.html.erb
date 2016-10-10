@@ -5,6 +5,7 @@
     <% if current_user.admin? %>
     | <%= link_to "delete", room, method: :delete,
                                   data: { confirm: "You sure?" } %>
+    | <%= link_to "view room history", room_history_path(room) %>
     <% end %>
 
 </li>

@@ -100,6 +100,11 @@ class HistoriesController < ApplicationController
     end
   end
   
+  def roomhistory
+    @room = Room.find(params[:id])
+    @histories = History.where(room_id: @room.room_id).order(:startTime)
+  end
+  
   private
     def history_params
       params.require(:history).permit(:user_email, :room_id, :startTime, :endTime)

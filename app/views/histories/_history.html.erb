@@ -2,8 +2,8 @@
   <%= link_to history.id, history %>
     |<%= history.room_id %>
     |<%= history.user_email %>
-    |<%= history.startTime %>
-    |<%= history.endTime %>
+    |<%= history.startTime.to_time.strftime("%Y-%b-%d %I%p") %>
+    -<%= history.endTime.to_time.strftime("%Y-%b-%d %I%p") %>
     
     
     <% if current_user.pre_admin? %>

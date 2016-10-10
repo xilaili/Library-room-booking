@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<h1><%= "Room #{@room.room_id} booking histories:" %></h1>
+      <% current, past = [], [] %>
+      <% for h in @histories %>
+        <% if h.endTime<Time.now-3.hours %>
+          <% past.push(h) %>
+        <% else %>
+          <% current.push(h) %>
+        <% end %>
+      <% end %>
+      <br><strong>Current booking</strong><br><br>
+      <% for h in current %>
+      <li>
+        <%= h.user_email %> | <%= h.startTime.to_time.strftime("%Y-%b-%d %I%p") %> - <%= h.endTime.to_time.strftime("%Y-%b-%d %I%p") %> | <%= link_to "Cancel Booking", h, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+      </li>
+      <% end %>
+      <br><strong>Past booking</strong><br><br>
+      <% for h in past %>
+      <li>
+        <%= h.user_email %> | <%= h.startTime.to_time.strftime("%Y-%b-%d %I%p") %> - <%= h.endTime.to_time.strftime("%Y-%b-%d %I%p") %> 
+      </li>
+      <% end %>
+      

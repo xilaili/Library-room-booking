@@ -1,2 +1,19 @@
-<h1>Histories#show</h1>
-<p>Find me in app/views/histories/show.html.erb</p>
+<p>
+  <strong>Start Time:</strong>
+  <%= @history.startTime.to_time.strftime("%Y-%b-%d %I%p") %>
+</p>
+
+<p>
+  <strong>End Time:</strong>
+  <%= @history.endTime.to_time.strftime("%Y-%b-%d %I%p") %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @history.room_id %>
+</p>
+
+<p>
+  <strong>Library member:</strong>
+  <%= @history.user_email %>
+</p>

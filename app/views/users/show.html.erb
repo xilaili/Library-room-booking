@@ -21,14 +21,14 @@
           <% current.push(h) %>
         <% end %>
       <% end %>
-      <br><h>Current booking</h><br><br>
+      <br><strong>Current booking</strong><br><br>
       <% for h in current %>
       <li>
         <%= h.room_id %> | <%= h.startTime %> | <%= h.endTime %> | <%= link_to "Cancel Booking", h, method: :delete,
                                   data: { confirm: "You sure?" } %>
       </li>
       <% end %>
-      <br><h>Past booking</h><br><br>
+      <br><strong>Past booking</strong><br><br>
       <% for h in past %>
       <li>
         <%= h.room_id %> | <%= h.startTime %> | <%= h.endTime %> 

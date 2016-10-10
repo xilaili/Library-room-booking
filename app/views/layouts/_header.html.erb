@@ -8,13 +8,22 @@
         <li><%= link_to "Home", root_path %></li>
         
         <% if logged_in? and isadmin? %>
-          <li><%= link_to "Users", users_path %></li>
-          <li><%= link_to "Admins", admins_path %></li>
-          <li><%= link_to "create user/admin", createuseradmin_path %></li>
+          
           <li><%= link_to "Histories", histories_path %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Manage Users <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Users", users_path %></li>
+              <li><%= link_to "Admins", admins_path %></li>
+              <li><%= link_to "create user/admin", createuseradmin_path %></li>
+            </ul>
+          </li>
         <% end %>
         <% if logged_in? %>
           <li><%= link_to "Rooms", rooms_path %></li>
+          <li><%= link_to "Book A Room", search_path %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Account <b class="caret"></b>

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   get    'admins'      => 'users#adminlist'
   get    'createuseradmin'      => 'users#new'
+  get '/roomhistory/:id', to: 'histories#roomhistory',  via: :get, as: :room_history
   
   resources :users
   get  '/users/:id(.:format)/upgrade' => 'users#upgrade'
