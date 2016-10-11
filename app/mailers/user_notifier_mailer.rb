@@ -10,6 +10,6 @@ class UserNotifierMailer < ApplicationMailer
         @email = email
         @booking = booking
         @building = building
-        mail(to: email, subject: 'NCSU Libraries room reserve confirmation')
+        mail(to: booking.email, subject: 'NCSU Libraries room reserve confirmation')
     end
 end
