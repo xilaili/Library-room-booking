@@ -44,7 +44,7 @@ class HistoriesController < ApplicationController
         render 'new' and return 
       end
     end
-    if !admin_user?
+    if !current_user.admin?
       temp = History.where(user_email: @history.user_email)
       temp.each do |t|
         if t.startTime.to_time.to_date==@history.startTime.to_time.to_date
