@@ -93,8 +93,8 @@ Rails.application.configure do
       :address              => "smtp.gmail.com",
       :port                 => 587,
       :domain               => "gmail.com",
-      :user_name            => "library.ncstate@gmail.com",
-      :password             => "wonderwoman",
+      :user_name            => "1332731189@qq.com",
+      :password             => "GRE.911004lxl",
       :authentication       => "plain",
       :enable_starttls_auto => true
   } #ddd
