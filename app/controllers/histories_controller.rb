@@ -44,12 +44,13 @@ class HistoriesController < ApplicationController
         render 'new' and return 
       end
     end
-    
-    temp = History.where(user_email: @history.user_email)
-    temp.each do |t|
-      if t.startTime.to_time.to_date==@history.startTime.to_time.to_date
-        flash[:danger] = "member cannot book 2 room within a day, please cancel your previous booking to proceed "
-        render 'new' and return
+    if !admin_user?
+      temp = History.where(user_email: @history.user_email)
+      temp.each do |t|
+        if t.startTime.to_time.to_date==@history.startTime.to_time.to_date
+          flash[:danger] = "member cannot book 2 room within a day, please cancel your previous booking to proceed "
+          render 'new' and return
+        end
       end
     end
     
