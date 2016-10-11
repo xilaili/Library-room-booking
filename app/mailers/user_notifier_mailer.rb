@@ -1,6 +1,6 @@
 class UserNotifierMailer < ApplicationMailer
     layout 'mailer'
-    default from: "1332731189@qq.com"
+    default from: "library.ncstate@gmail.com"
     def send_signup_email(user)
         @user = user
         mail(to: @user.email, subject: 'NCSU Libraries signup confirmation')
