@@ -42388,3 +42388,87 @@ Processing by HistoriesController#roomhistory as HTML
 Completed 200 OK in 245ms (Views: 236.4ms | ActiveRecord: 2.5ms)
 
 
+Started GET "/" for 10.240.0.204 at 2016-10-11 06:53:02 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (23.8ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (68.6ms)
+  Rendered layouts/_footer.html.erb (1.7ms)
+Completed 200 OK in 777ms (Views: 750.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/search" for 10.240.1.19 at 2016-10-11 06:53:08 +0000
+Cannot render console from 10.240.1.19! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HistoriesController#search as HTML
+  Rendering histories/search.html.erb within layouts/application
+  Rendered histories/search.html.erb within layouts/application (579.1ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 690ms (Views: 682.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rooms" for 10.240.1.19 at 2016-10-11 06:53:12 +0000
+Cannot render console from 10.240.1.19! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by RoomsController#index as HTML
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "rooms"[0m
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of rooms/_room.html.erb [5 times] (9.7ms)
+  Rendered rooms/index.html.erb within layouts/application (118.3ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 260ms (Views: 246.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users" for 10.240.1.15 at 2016-10-11 06:53:14 +0000
+Cannot render console from 10.240.1.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."admin" = ?[0m  [["admin", false]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."admin" = ? LIMIT ? OFFSET ?[0m  [["admin", false], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered users/_user.html.erb (2.4ms)
+  Rendered users/_user.html.erb (0.9ms)
+  Rendered users/_user.html.erb (0.8ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.7ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.7ms)
+  Rendered users/_user.html.erb (18.0ms)
+  Rendered users/_user.html.erb (0.8ms)
+  Rendered users/_user.html.erb (0.7ms)
+  Rendered users/_user.html.erb (0.7ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.4ms)
+  Rendered users/_user.html.erb (0.7ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (1.7ms)
+  Rendered users/_user.html.erb (3.4ms)
+  Rendered users/_user.html.erb (0.7ms)
+  Rendered users/_user.html.erb (0.8ms)
+  Rendered users/index.html.erb within layouts/application (126.8ms)
+  Rendered layouts/_shim.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 245ms (Views: 235.5ms | ActiveRecord: 2.3ms)
+
+

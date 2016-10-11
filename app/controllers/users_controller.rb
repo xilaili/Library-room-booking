@@ -36,6 +36,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)    # Not the final implementation!
     if @user.save
+      UserNotifierMailer.send_signup_email(@user).deliver
       if current_user.nil?
          log_in @user
          redirect_to @user
