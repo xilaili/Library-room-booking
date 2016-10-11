@@ -34,6 +34,7 @@ Following are the things that are already set up :
   
 * <b>Extra features</b>
   * email notification when signing up and booking a room successfully
+  * booking can only be made up to 7 days ahead
   * A library member can reserve only one room at a particular date and time. Only after his/her reservation is released, he/she can proceed to reserve another room. But an admin can allow a library member to reserve multiple rooms at one time.
 
 * <b>Test</b>
