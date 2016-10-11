@@ -42,6 +42,7 @@ class HistoriesController < ApplicationController
     end
     
     if @history.save
+      UserNotifierMailer.send_reserve_email(@history.user_email, @history).deliver
       flash[:success] = "The history has been created"
       if current_user.admin? 
         redirect_to histories_url
