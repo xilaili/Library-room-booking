@@ -97,5 +97,5 @@ Rails.application.configure do
       :password             => "wonderwoman",
       :authentication       => "plain",
       :enable_starttls_auto => true
-  }
+  } #ddd
 end
