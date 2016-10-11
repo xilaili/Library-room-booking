@@ -31,6 +31,11 @@ Following are the things that are already set up :
   * Anyone can signup to become a member. He is automatically logged in after signup.He can update his password and name (email update is not allowed).
   * Book a room that is available to member and cancel the room that he booked.
   * See the room that he booked in the profile page and also his history of booking room  in user profile page(show page)
+  
+* <b>Extra features</b>
+  * email notification when signing up and booking a room successfully
+  * A library member can reserve only one room at a particular date and time. Only after his/her reservation is released, he/she can proceed to reserve another room. But an admin can allow a library member to reserve multiple rooms at one time.
+
 * <b>Test</b>
   * we have write the test case to the user model and user controller.
     * users_controller_test(path:test/controllers/users_controller_test.rb):test the function of the controller
