@@ -6,9 +6,10 @@ class UserNotifierMailer < ApplicationMailer
         mail(to: @user.email, subject: 'NCSU Libraries signup confirmation')
     end
     
-    def send_reserve_email(email, booking)
+    def send_reserve_email(email, booking, building)
         @email = email
         @booking = booking
+        @building = building
         mail(to: email, subject: 'NCSU Libraries room reserve confirmation')
     end
 end
