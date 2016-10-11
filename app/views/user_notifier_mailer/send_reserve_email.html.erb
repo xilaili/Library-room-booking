@@ -4,11 +4,11 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Hi, <%= @email %>!</h1>
+    <h1>Hi, <%= @booking.user_email %>!</h1>
     <li>You have reserved a study room:</li>
     <li>Room No.: <%= @booking.room_id %></li>
     <li>Building: <%= @building %></li>
-    <li>Time: from <%= @booking.startTime %> to <%= @booking.endTime %></li>
+    <li>Time: from <%= @booking.startTime.to_time.strftime("%Y-%b-%d %I%p") %> to <%= @booking.endTime.to_time.strftime("%Y-%b-%d %I%p") %></li>
     <li>booked by: <%= @email %></li>
     <li><%= link_to 'click here', @booking %> to view your booking</li>
   </body>
