@@ -10,6 +10,6 @@
     <li>Building: <%= @building %></li>
     <li>Time: from <%= @booking.startTime.to_time.strftime("%Y-%b-%d %I%p") %> to <%= @booking.endTime.to_time.strftime("%Y-%b-%d %I%p") %></li>
     <li>booked by: <%= @email %></li>
-    <li><%= link_to 'click here', @booking %> to view your booking</li>
+    <li><%= link_to 'click here', root_url %> to view your booking</li>
   </body>
 </html>

@@ -26,6 +26,10 @@ class HistoriesController < ApplicationController
       flash[:danger] = "booking up to 7 days ahead"
       render 'new' and return 
     end
+    if @history.endTime.to_time <= Time.now - 3.hours
+      flash[:danger] = "time selected has past"
+      render 'new' and return 
+    end
     
     #check availability
     @hists = History.where(room_id: @history.room_id)
@@ -38,6 +42,14 @@ class HistoriesController < ApplicationController
       if h.startTime<@history.endTime and h.endTime>=@history.endTime
         flash[:danger] = "Conflict"
         render 'new' and return 
+      end
+    end
+    
+    temp = History.where(user_email: @history.user_email)
+    temp.each do |t|
+      if t.startTime.to_time.to_date==@history.startTime.to_time.to_date
+        flash[:danger] = "member cannot book 2 room within a day, please cancel your previous booking to proceed "
+        render 'new' and return
       end
     end
     
@@ -72,6 +84,14 @@ class HistoriesController < ApplicationController
       @building = params[:building]
       @search_start_time = DateTime.new(params[:start_time]['year'].to_i ,params[:start_time]['month'].to_i ,params[:start_time]['day'].to_i ,params[:start_time]['hour'].to_i ,00,00)
       @search_end_time = @search_start_time + 2.hours
+      if @search_end_time <= Time.now - 3.hours
+        flash[:danger] = "time selected has past, select a new time"
+      end
+=begin
+      if @search_start_time > Time.now+7.days
+        flash[:danger] = "booking up to 7 days ahead"
+      end
+=end
 =begin
       subquery = Room.joins("LEFT OUTER JOIN histories on rooms.room_id = histories.room_id").where("((? >= histories.startTime AND ? < histories.endTime ) OR ( ? > histories.startTime AND ? <= histories.endTime ))", @search_start_time, @search_start_time, @search_end_time, @search_end_time).distinct.select('rooms.room_id')
 =end
